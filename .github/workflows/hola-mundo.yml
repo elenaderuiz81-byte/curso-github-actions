@@ -1,17 +1,13 @@
 name: Aprendiendo GitHub Actions
 run-name: Estoy Aprendiendo GitHub Actions
-
 on: [push]
-
 jobs:
   holamundo:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: Definir variable de entorno
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
-
       - name: Correr script
-        run: python holamundo.py
+        run: python hola_mundo.py
